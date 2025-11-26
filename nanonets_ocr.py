@@ -44,7 +44,7 @@ def ocr_pdf_with_nanonets(pdf_path, model, processor):
     
     for page_number in range(len(doc)):
         page = doc[page_number]
-        pix = page.get_pixmap(dpi=300)  # convert page to image
+        pix = page.get_pixmap(dpi=150)  # convert page to image
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
         text = ocr_page_with_nanonets_s(img, model, processor)
         results.append(f"--- Page {page_number + 1} ---\n{text}\n")
