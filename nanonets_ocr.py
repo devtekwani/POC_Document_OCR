@@ -81,6 +81,6 @@ def ocr_pdf_memory_efficient(pdf_path, model, processor):
 # Example usage
 # ------------------------------
 if __name__ == "__main__":
-    pdf_path = "MSTRL-API-684145-003.pdf"
+    pdf_path = "Medicleanse Multi Invoice Sample 1.pdf"
     result_text = ocr_pdf_memory_efficient(pdf_path, model, processor)
     print(result_text)
